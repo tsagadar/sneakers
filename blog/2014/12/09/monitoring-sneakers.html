@@ -55,13 +55,13 @@
 
 <p>In itself an important metric to measure, to expose a bad / error prone bulking strategy.</p>
 
-<p><img alt="" src="../images/blog/events-in-bundle.png" /></p>
+<p><img alt="" src="../../../../images/blog/events-in-bundle.png" /></p>
 
 <p>A good practice is to always measure the average payload size - the size of a message passed to a worker. Again this is a kind of parameter that may affect job handling time and may expose misconfiguration / errors with original messages.</p>
 
 <p>The size of a message and rate of messages are also useful in computing and monitoring the network capacity and saturation.</p>
 
-<p><img alt="" src="../images/blog/payload-bytes.png" /></p>
+<p><img alt="" src="../../../../images/blog/payload-bytes.png" /></p>
 
 <h4 id="monitoring-worker-metrics">Monitoring Worker Metrics</h4>
 
@@ -69,15 +69,15 @@
 
 <p>This metric along with the CPU's state will help you answer questions such as are jobs I/O bound? are they CPU bound?</p>
 
-<p><img alt="" src="../images/blog/job-latency.png" /></p>
+<p><img alt="" src="../../../../images/blog/job-latency.png" /></p>
 
 <p>Job/sec is the ultimate eyecandy metric; Beyond that, it is also a very useful tool to base any anomaly / spike detection on with your jobs. It's also one of the metrics that you should always find changing - seasonality, peaks, spikes, etc.</p>
 
-<p><img alt="" src="../images/blog/jobs-sec.png" /></p>
+<p><img alt="" src="../../../../images/blog/jobs-sec.png" /></p>
 
 <p>Worker errors are errors that aren't handled by any of your code. Very useful for a baseline for monitoring.</p>
 
-<p><img alt="" src="../images/blog/worker-errors.png" /></p>
+<p><img alt="" src="../../../../images/blog/worker-errors.png" /></p>
 
 <h4 id="monitoring-rabbitmq">Monitoring RabbitMQ</h4>
 
@@ -98,19 +98,19 @@
 
 <p>Starting off with CPU, obviously. This is cpu-idle:</p>
 
-<p><img alt="" src="../images/blog/cpu-idle.png" /></p>
+<p><img alt="" src="../../../../images/blog/cpu-idle.png" /></p>
 
 <p>Many threads, many processes generate a lot of contention and context switches. You want to be able to visualize the bottlenecks.</p>
 
-<p><img alt="" src="../images/blog/context-switches.png" /></p>
+<p><img alt="" src="../../../../images/blog/context-switches.png" /></p>
 
 <p>Ruby processes may become notoriously memory-hungry. This is real free memory:</p>
 
-<p><img alt="" src="../images/blog/free-mem.png" /></p>
+<p><img alt="" src="../../../../images/blog/free-mem.png" /></p>
 
 <p>If your worker interacts with the world, it's useful to monitor the amount of open connections. Open connections run out quickly on a high-scale solution. This is open connections:</p>
 
-<p><img alt="" src="../images/blog/open-web-connections.png" /></p>
+<p><img alt="" src="../../../../images/blog/open-web-connections.png" /></p>
 
 <h4 id="conclusion">Conclusion</h4>
 
