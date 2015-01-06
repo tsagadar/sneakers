@@ -92,13 +92,13 @@ you're happy about it - please feel free to leave your mark.&lt;/p&gt;
 
 &lt;p&gt;In itself an important metric to measure, to expose a bad / error prone bulking strategy.&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt="" src="/images/blog/events-in-bundle.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="../images/blog/events-in-bundle.png" /&gt;&lt;/p&gt;
 
 &lt;p&gt;A good practice is to always measure the average payload size - the size of a message passed to a worker. Again this is a kind of parameter that may affect job handling time and may expose misconfiguration / errors with original messages.&lt;/p&gt;
 
 &lt;p&gt;The size of a message and rate of messages are also useful in computing and monitoring the network capacity and saturation.&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt="" src="/images/blog/payload-bytes.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="../images/blog/payload-bytes.png" /&gt;&lt;/p&gt;
 
 &lt;h4 id="monitoring-worker-metrics"&gt;Monitoring Worker Metrics&lt;/h4&gt;
 
@@ -106,15 +106,15 @@ you're happy about it - please feel free to leave your mark.&lt;/p&gt;
 
 &lt;p&gt;This metric along with the CPU's state will help you answer questions such as are jobs I/O bound? are they CPU bound?&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt="" src="/images/blog/job-latency.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="../images/blog/job-latency.png" /&gt;&lt;/p&gt;
 
 &lt;p&gt;Job/sec is the ultimate eyecandy metric; Beyond that, it is also a very useful tool to base any anomaly / spike detection on with your jobs. It's also one of the metrics that you should always find changing - seasonality, peaks, spikes, etc.&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt="" src="/images/blog/jobs-sec.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="../images/blog/jobs-sec.png" /&gt;&lt;/p&gt;
 
 &lt;p&gt;Worker errors are errors that aren't handled by any of your code. Very useful for a baseline for monitoring.&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt="" src="/images/blog/worker-errors.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="../images/blog/worker-errors.png" /&gt;&lt;/p&gt;
 
 &lt;h4 id="monitoring-rabbitmq"&gt;Monitoring RabbitMQ&lt;/h4&gt;
 
@@ -135,19 +135,19 @@ you're happy about it - please feel free to leave your mark.&lt;/p&gt;
 
 &lt;p&gt;Starting off with CPU, obviously. This is cpu-idle:&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt="" src="/images/blog/cpu-idle.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="../images/blog/cpu-idle.png" /&gt;&lt;/p&gt;
 
 &lt;p&gt;Many threads, many processes generate a lot of contention and context switches. You want to be able to visualize the bottlenecks.&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt="" src="/images/blog/context-switches.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="../images/blog/context-switches.png" /&gt;&lt;/p&gt;
 
 &lt;p&gt;Ruby processes may become notoriously memory-hungry. This is real free memory:&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt="" src="/images/blog/free-mem.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="../images/blog/free-mem.png" /&gt;&lt;/p&gt;
 
 &lt;p&gt;If your worker interacts with the world, it's useful to monitor the amount of open connections. Open connections run out quickly on a high-scale solution. This is open connections:&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt="" src="/images/blog/open-web-connections.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="../images/blog/open-web-connections.png" /&gt;&lt;/p&gt;
 
 &lt;h4 id="conclusion"&gt;Conclusion&lt;/h4&gt;
 
@@ -179,7 +179,7 @@ and in turn, it can declare what it depends on - like any other software project
 
 &lt;p&gt;A modular worker is a first-class software project, that can be iterated upon independently and quickly.&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt="" src="/images/blog/modular_workers-acmeworker.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="../images/blog/modular_workers-acmeworker.png" /&gt;&lt;/p&gt;
 
 &lt;p&gt;One strategy of creating a modular worker architecture is to extract all your worker code into 2 projects.&lt;/p&gt;
 
