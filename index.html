@@ -1,205 +1,268 @@
 <!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>sneakers.io</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-        <link rel="stylesheet" href="styles/059fb921.main.css">
-    </head>
-    <body>
-        <!--[if lt IE 10]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+<html>
+  <head>
+<link href='/favicon.ico' rel='icon' type='image/x-icon'/>
+    <meta charset="utf-8">
+    
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Sneakers | Performance Background Processing for Ruby</title>
+    
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
+    <link href="/stylesheets/app.css" rel="stylesheet" type="text/css" />
+  </head>
+  
+  <body class="landing index">
+    
+<header class="navigation">
+  <div class="navigation-wrapper">
+    <div class="navigation-content">
+      <div style="padding:0px">
+        <a href="/" class="logo">
+          <img src="/images/main_logo.png" alt="Logo Image">
+        </a>
+      </div>
+      <a href="" class="navigation-menu-button" id="js-mobile-menu">MENU</a>
+      <div class="nav">
+        <ul id="navigation-menu">
+          <li class="nav-link selected"><a href="/">Home</a></li>
+          <li class="nav-link "><a href="blog">Blog</a></li>
+          <li class="nav-link"><a href="https://github.com/jondot/sneakers/wiki">Docs</a></li>
+          <li class="nav-link">
+          <a class="fork" href="https://github.com/jondot/sneakers"><i class="fa fa-github"></i> Fork on Github &rarr;</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
 
+      <section id="hero">
+    <div id="hero-logo">
+      <img src="/images/main_logo.png" width="300px" alt="Sneakers - Performance Background Processing For Ruby"/>
+    </div>
+    <h1>Sneakers</h1>
+    <h3 class="sectiontitle">High Performance Backround Jobs. On Ruby.</h3>
+    <a href="http://rubygems.org/gems/sneakers">
+      <img src="https://img.shields.io/gem/v/sneakers.svg" alt="Version"/>
+      <img src="https://img.shields.io/gem/dt/sneakers.svg" alt="Downloads"/>
+    </a>
+  </section>
 
-        <div class="container">
-            <div class="hero">
-              <img src="images/08a02b01.sneakers.png">
-              <h1>Sneakers</h1>
-              <h2>
-                Performance background processing for Ruby
-              </h2>
-              <br>
-
-              <a class="slimlink black" href="http://github.com/jondot/sneakers">Fork on Github &rarr;</a>
-              <br/>
-              <br/>
-              <small>Psst! Fancy <a class="" href="http://teespring.com/sneakers">our non-profit but cool shirt</a>? :)</small>
+  <section id="features">
+    <div class="content">
+      <ul class="bullets">
+        <li class="bullet three-col-bullet">
+          <div class="bullet-icon bullet-icon-1">
+            <img src="/images/ic_1.png" alt="">
+          </div>
+          <div class="bullet-content">
+            <h4>Performance.</h4>
+            <p>Combined multi-process and multi-threaded processing model maxes out all your cores.</p>
             </div>
+        </li>
+        <li class="bullet three-col-bullet">
+          <div class="bullet-icon bullet-icon-2">
+            <img src="/images/ic_2.png" alt="">
+          </div>
+          <div class="bullet-content">
+            <h4>Workers.</h4>
+            <p>Out of the box worker management, metrics, message handling and more, while being highly configurable and easily extensible.</p>
+          </div>
+        </li>
+        <li class="bullet three-col-bullet">
+          <div class="bullet-icon bullet-icon-3">
+            <img src="/images/ic_3.png" alt="">
+          </div>
+          <div class="bullet-content">
+            <h4>RabbitMQ.</h4>
+            <p>We built on RabbitMQ &mdash; a robust, performant and stable queue broker that everyone loves.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
 
-            <div class="row features">
-              <div class="col-lg-12">
 
-                <div class="feature">
-                  <div class="feature-icon">
-                    <i class="icon-chart-area"></i>
-                  </div>
-                  <div class="feature-desc">
-                    <h1>Performance Happy</h1>
-                    <p>
-                      Hybrid multi-process and multi-threaded processing model max
-                      out all your cores.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="feature">
-                  <div class="feature-icon">
-                    <i class="icon-flow-tree"></i>
-                  </div>
-                  <div class="feature-desc">
-                    <h1>Worker Management</h1>
-                    <p>
-                      If you liked how Unicorn works, we used a similar model to support 
-                      rolling upgrades and reloads.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="feature">
-                  <div class="feature-icon">
-                    <i class="icon-infinity" style="line-height:110px"></i>
-                  </div>
-                  <div class="feature-desc">
-                    <h1>Scalable Queue Broker</h1>
-                    <p>
-                      We built on <a href="http://rabbitmq.com">RabbitMQ</a> a robust, performant and stable queue broker that
-                      everyone loves.
-                    </p>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-
-            <div class="row quickstart">
-              <div class="col-lg-8 walkthrough">
-                <h1>Quick Start</h1>
-
-                <p>Install the gem:</p>
-                <pre><code class="language-ruby">$ gem install 'sneakers'</code></pre>
-
-                <p>Make a worker or two:</p>
-                <pre><code class="language-ruby">require 'sneakers'
-require 'open-uri'
-require 'nokogiri'
-
-class TitleScraper
+  <section id="quickstart">
+    <div class="content">
+      <h3 class="sectiontitle">It's as simple as 1-2-3.</h3>
+      <div class="quickstart-steps">
+        <div>1. Install</div>
+        <pre><code class="lang-bash">$ gem install sneakers
+</code></pre>
+        <div>2. Make a Worker</div>
+        <pre><code class="lang-ruby">class TitleScraper
   include Sneakers::Worker
   from_queue 'downloads'
 
   def work(msg)
     doc = Nokogiri::HTML(open(msg))
-    worker_trace doc.css('title').text
+    worker_trace "FOUND &lt;#{doc.css('title').text}&gt;"
     ack!
   end
-end</code></pre>
-                <p>Include our rake tasks:</p>
-                <pre><code class="language-ruby">require 'sneakers/tasks'</code></pre>
-                <p>And run:</p>
-                <pre><code class="language-ruby">$ export WORKERS=TitleScraper
-$ rake sneakers:run</code></pre>
-            </div>
+end
+</code></pre>
+        <div>3. Run</div>
+        <pre><code>$ foreman start
+# or require 'sneakers/tasks', and:
+# $ WORKERS=TitleScraper rake sneakers:run
+</code></pre>
+      </div>
+    </div>
+  </section>
 
 
 
-            <div class="col-lg-4 learn-more">
-            
-            
-              <div class="learn-bit">
-                <a href="https://github.com/jondot/sneakers/wiki/Why-i-built-it">
-                  <h2>
-                    Why was Sneakers built?
-                  </h2>
-                  <p>Check out what kind of problems Sneakers cover</p>
-                </a>
-              </div>
-              
-            
-              <div class="learn-bit">
-                <a href="http://github.com/jondot/sneakers/wiki/Performance">
-                  <h2>
-                    Show me the numbers!
-                  </h2>
-                  <p>Take a look at how Sneakers performs</p>
-                </a>
-              </div>
-              
-              <div class="learn-bit">
-                <a href="http://github.com/jondot/sneakers/wiki/Auto-scaling">
-                  <h2>
-                    What if I got a ton of I/O?
-                  </h2>
-                  <p>That's why Sneakers lets you use a ton of threads (configurable, too!)</p>
-                </a>
-              </div>
+  <!-- section id="using">
+    <div class="content">
+      <h3 class="sectiontitle">See What People Say</h3>
+      <div class="comments-close">
+  <div class="comment">
+    <div class="comment-image">
+      <img src="http://www.gravatar.com/avatar/212c9d7980fe9aa71739313d483b3782?s=64.jpg" alt=""/>
+    </div>
+    <div class="comment-content">
+      <p>I love using Sneakers because it simply leverages RabbitMQ instead of
+reinventing messaging primitives on Redis or relational databases.  It's
+safer, simpler, and more flexible.</p>
+      <p class="comment-detail">
+        Abe Voelker
+      </p>
+    </div>
+  </div>
+</div>
 
-              <div class="learn-bit">
-                <a href="http://github.com/jondot/sneakers/wiki/Configuration">
-                  <h2>
-                    Configuration
-                  </h2>
-                  <p>Sneakers uses layers of default configurations so you can step in and tweak almost everything</p>
-                </a>
-              </div>
+<div class="comments-far">
+  <div class="comment">
+    <div class="comment-image">
+      <img src="http://www.gravatar.com/avatar/7bab8ed9cad2d098076b61b7cc3b8030?s=64.jpg" alt=""/>
+    </div>
+    <div class="comment-content">
+      <p>We're happily using Sneakers to implement a pragmatic and scalable <a href="http://en.wikipedia.org/wiki/Lambda_architecture">lambda architecture</a>, which streamed over 1 billion mission critical events so far.</p>
+      <p class="comment-detail">
+        Dotan Nahum, Chief Architect at Conduit
+      </p>
+    </div>
+  </div>
+</div>
 
-              <div class="learn-bit">
-                <a href="http://github.com/jondot/sneakers/wiki/Running-With-Sneakers">
-                  <h2>
-                    Many ways to run
-                  </h2>
-                  <p>You can run Sneakers via Rake, CLI or programmatically</p>
-                </a>
-              </div>
-              
-              <div class="learn-bit">
-                <a href="http://github.com/jondot/sneakers/wiki/Failures">
-                  <h2>
-                    Failures
-                  </h2>
-                  <p>We treat failures seriously, which is why we use the same concepts from RabbitMQ</p>
-                </a>
-              </div>
-
-              <div class="learn-bit">
-                <a href="http://github.com/jondot/sneakers/wiki/Creating-a-Worker">
-                  <h2>
-                    Using the Worker DSL
-                  </h2>
-                  <p>See what kind of things are provided to you for free for your worker code</p>
-                </a>
-              </div>
+      <div class="using-join">
+    Want to join in? <a href="https://github.com/jondot/sneakers.io">Submit a pull request</a>.
+      </div>
+    </div>
+  </section -->
 
 
-              <div class="learn-bit-more">
-                <a class="slimlink" href="http://github.com/jondot/sneakers/wiki">Continue to Wiki &rarr;</a>
-              </div>
-            </div>
+  <section id="learn">
+    <div class="content">
+      <h3 class="sectiontitle">Our Community Blog &mdash; Learn, Build, Repeat.</h3>
+
+      <div class="articles">
+          <div class="blogitem">
+  <div class="blogitem-content article_head---small">
+    <h1 class="article-title"><a href="/blog/2014/12/10/the-new-website.html">Sneakers 1.0 - The New Website</a></h1>
+<div class="article_head">
+  <div class="article_head-author">
+    <img src="http://www.gravatar.com/avatar/7bab8ed9cad2d098076b61b7cc3b8030?s=32.jpg" alt=""/>
+    <a href="http://twitter.com/jondot">Dotan Nahum</a>, Dec 10
+  </div>
+</div>
+
+
+  </div>
+</div>
+
+
+          <div class="blogitem">
+  <div class="blogitem-content article_head---small">
+    <h1 class="article-title"><a href="/blog/2014/12/09/monitoring-sneakers.html">Monitoring Sneakers</a></h1>
+<div class="article_head">
+  <div class="article_head-author">
+    <img src="http://www.gravatar.com/avatar/7bab8ed9cad2d098076b61b7cc3b8030?s=32.jpg" alt=""/>
+    <a href="http://twitter.com/jondot">Dotan Nahum</a>, Dec  9
+  </div>
+</div>
+
+
+  </div>
+</div>
+
+
+          <div class="blogitem">
+  <div class="blogitem-content article_head---small">
+    <h1 class="article-title"><a href="/blog/2014/12/04/modular-workers.html">Modular Workers for Easier Testing and Development</a></h1>
+<div class="article_head">
+  <div class="article_head-author">
+    <img src="http://www.gravatar.com/avatar/7bab8ed9cad2d098076b61b7cc3b8030?s=32.jpg" alt=""/>
+    <a href="http://twitter.com/jondot">Dotan Nahum</a>, Dec  4
+  </div>
+</div>
+
+
+  </div>
+</div>
+
+
+          <div class="blogitem">
+  <div class="blogitem-content article_head---small">
+    <h1 class="article-title"><a href="/blog/2014/11/21/what-weve-been-through.html">What We've Been Trough</a></h1>
+<div class="article_head">
+  <div class="article_head-author">
+    <img src="http://www.gravatar.com/avatar/7bab8ed9cad2d098076b61b7cc3b8030?s=32.jpg" alt=""/>
+    <a href="http://twitter.com/jondot">Dotan Nahum</a>, Nov 21
+  </div>
+</div>
+
+
+  </div>
+</div>
+
+
+      </div>
+    </div>
+  </section>
 
 
 
+    <footer class="footer">
+  <div class="footer-logo">
+  </div>
+  <div class="footer-links">
+    <ul>
+      <li><h3>Learn</h3></li>
+      <li><a href="https://github.com/jondot/sneakers/wiki">Docs</a></li>
+      <li><a href="/blog">Blog</a></li>
+    </ul>
+    <ul>
+      <li><h3>Follow</h3></li>
+      <li><a href="https://github.com/jondot/sneakers">Github</a></li>
+      <li><a href="http://twitter.com/jondot">Follow @jondot</a></li>
+      <li><a href="mailto:jondotan@gmail.com">Say hi :)</a></li>
+    </ul>
+    <ul>
+      <li><h3>Community</h3></li>
+      <li><a href="https://github.com/jondot/sneakers/issues">Issues</a></li>
+      <li><a href="https://github.com/jondot/sneakers#contributing">How to Contribute</a></li>
+      <li><a href="https://github.com/jondot/sneakers/wiki">Getting Help</a></li>
+    </ul>
+  </div>
+  <p>
+  Copyright © 2014 Dotan Nahum and contributors - Licensed under MIT.
+  </p>
+</footer>
 
-          </div>
-        </div>
 
 
-        <script src="scripts/0542938e.vendor.js"></script>
-
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-7131053-14');ga('send','pageview');
-        </script>
-
-        <script src="scripts/089d4d4c.main.js"></script>
-</body>
+    <script src="/javascripts/app.js" type="text/javascript"></script>
+    <script>
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','UA-7131053-14');ga('send','pageview');
+    </script>
+  </body>
 </html>
