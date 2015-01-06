@@ -179,7 +179,7 @@ and in turn, it can declare what it depends on - like any other software project
 
 &lt;p&gt;A modular worker is a first-class software project, that can be iterated upon independently and quickly.&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt="" src="../images/%=image_path('blog/modular_workers-acmeworker.png')%" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="../images/blog/modular_workers-acmeworker.png" /&gt;&lt;/p&gt;
 
 &lt;p&gt;One strategy of creating a modular worker architecture is to extract all your worker code into 2 projects.&lt;/p&gt;
 
