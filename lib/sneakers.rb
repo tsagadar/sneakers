@@ -47,6 +47,10 @@ module Sneakers
     logger.level = loglevel
   end
 
+  def logger=(logger)
+    @logger = logger
+  end
+
   def logger
     @logger
   end
@@ -59,13 +63,25 @@ module Sneakers
     @configured
   end
 
+  def server=(server)
+    @server = server
+  end
+
+  def server?
+    @server
+  end
+
+  def configure_server
+    yield self if server?
+  end
+
   private
 
   def setup_general_logger!
     if [:info, :debug, :error, :warn].all?{ |meth| CONFIG[:log].respond_to?(meth) }
       @logger = CONFIG[:log]
     else
-      @logger = Logger.new(CONFIG[:log])
+      @logger = ServerEngine::DaemonLogger.new(CONFIG[:log])
       @logger.formatter = Sneakers::Support::ProductionFormatter
     end
   end

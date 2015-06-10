@@ -3,6 +3,11 @@ require 'sneakers'
 
 describe Sneakers::Publisher do
   describe '#publish' do
+    before do
+      Sneakers.clear!
+      Sneakers.configure(:log => 'sneakers.log')
+    end
+
     it 'should publish a message to an exchange' do
       xchg = Object.new
       mock(xchg).publish('test msg', routing_key: 'downloads')
@@ -55,11 +60,12 @@ describe Sneakers::Publisher do
         amqp: 'amqp://someuser:somepassword@somehost:5672',
         heartbeat: 1, exchange: 'another_exchange',
         exchange_type: :topic,
+        exchange_arguments: { 'x-arg' => 'value' },
         log: logger,
         durable: false)
 
       channel = Object.new
-      mock(channel).exchange('another_exchange', type: :topic, durable: false) do
+      mock(channel).exchange('another_exchange', type: :topic, durable: false, arguments: { 'x-arg' => 'value' }) do
         mock(Object.new).publish('test msg', routing_key: 'downloads')
       end
 

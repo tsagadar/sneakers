@@ -4,7 +4,7 @@ module Sneakers
   class Configuration
 
     extend Forwardable
-    def_delegators :@hash, :to_hash, :[], :[]=, :merge!, :==, :fetch, :delete
+    def_delegators :@hash, :to_hash, :[], :[]=, :==, :fetch, :delete, :has_key?
 
     DEFAULTS = {
       # runner
@@ -26,6 +26,7 @@ module Sneakers
       :heartbeat          => 2,
       :exchange           => 'sneakers',
       :exchange_type      => :direct,
+      :exchange_arguments => {}, # Passed as :arguments to Bunny::Channel#exchange
       :hooks              => {}
     }.freeze
 
@@ -38,6 +39,29 @@ module Sneakers
       @hash = DEFAULTS.dup
       @hash[:amqp]  = ENV.fetch('RABBITMQ_URL', 'amqp://guest:guest@localhost:5672')
       @hash[:vhost] = AMQ::Settings.parse_amqp_url(@hash[:amqp]).fetch(:vhost, '/')
+    end
+
+    def merge!(hash)
+      hash = hash.dup
+
+      # parse vhost from amqp if vhost is not specified explicitly, only
+      # if we're not given a connection to use.
+      if hash[:connection].nil?
+        if hash[:vhost].nil? && !hash[:amqp].nil?
+          hash[:vhost] = AMQ::Settings.parse_amqp_url(hash[:amqp]).fetch(:vhost, '/')
+        end
+      else
+        # If we are given a Bunny object, ignore params we'd otherwise use to
+        # create one.  This removes any question about where config params are
+        # coming from, and makes it more likely that downstream code that needs
+        # this info gets it from the right place.
+        [:vhost, :amqp, :heartbeat].each do |k|
+          hash.delete(k)
+          @hash.delete(k)
+        end
+      end
+
+      @hash.merge!(hash)
     end
 
     def merge(hash)
