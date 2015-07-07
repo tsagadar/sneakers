@@ -9,6 +9,7 @@ namespace :sneakers do
     Sneakers.server = true
     Rake::Task['environment'].invoke
 
+    ::Rails.application.eager_load!
     workers, missing_workers = Sneakers::Utils.parse_workers(ENV['WORKERS'])
 
     unless missing_workers.empty?
